@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Blackjack</title>
+    <link rel="stylesheet" href="styles/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+
+</head>
+
+<body>
+
+    <div class="mesa">
+        <header>
+            <div class="cabecera">
+                <img class="imgcab" src="assets/images/blackjack.jpg" alt="Imagen de cabecera con nombre del juego">
+            </div>
+        </header>
+        <section>
+            <div class="jugador">
+                <h2 class="j1" id="jugador">Jugador</h2>
+                <div class="mano" id="mano-jugador"><img id="first1" src="assets/images/red_back.png"
+                        alt="imagen de parte de atras carta"></div>
+                <p id="contador-puntos">0</p>
+                <button id="pedir-cartas" onclick="agregarCartaJugador()"></button>
+                <P class="descripcion">PIDE CARTA</P>
+                <button id="plantarse" onclick="plantarse()"></button>
+                <P class="descripcion">PLANTARSE</P>
+            </div>
+            <div class="crupier">
+                <h2 class="j2">CRUPIER</h2>
+                <div class="mano" id="mano-crupier"><img id="first2" src="assets/images/grey_back.png"
+                        alt="imagen de parte de atras carta"></div>
+                <p id="puntuacion-crupier">0</p>
+                <button id="pedir-cartas-crupier" onclick="agregarCartaBanca()"></button>
+                <P class="descripcion">JUGADA</P>
+            </div>
+        </section>
+
+        <footer>
+            <div class="contenedor-imagen">
+                <button id="nueva-partida" onclick="reseteoJuego()"></button>
+                <P class="descripcion">NUEVA PARTIDA</P>
+            </div>
+            <p id="sorry"></p>
+            <p id="mensaje"></p>
+
+        </footer>
+
+    </div>
+</body>
+<script src="js/js.js"></script>
+</html>
